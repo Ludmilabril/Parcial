@@ -2,17 +2,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+
+public class GameManagerLevel2 : MonoBehaviour
 {
     public static bool gameOver = false;
     public static bool winCondition = false;
     public static int actualPlayer = 0;
-    public int targetsToWin = 7;
+    public int targetsToWin = 2;
 
-    public List<Controller_Target> targets;
-    public List<Controller_Player> players;
+    public List<Controller_TargetLevel2> targets;
+    public List<Controller_PlayerLevel2> players;
 
     void Start()
     {
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     private void CheckWin()
     {
         int i = 0;
-        foreach (Controller_Target t in targets)
+        foreach (Controller_TargetLevel2 t in targets)
         {
             if (t.playerOnTarget)
             {
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
         }
         if (i >= targetsToWin)
         {
-            SceneManager.LoadScene("Nivel2");
+            winCondition = true;
         }
     }
 
@@ -77,7 +77,7 @@ public class GameManager : MonoBehaviour
 
     private void SetConstraints()
     {
-        foreach (Controller_Player p in players)
+        foreach (Controller_PlayerLevel2 p in players)
         {
             if (p == players[actualPlayer])
             {

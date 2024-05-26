@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Controller_Player : MonoBehaviour
+public class Controller_PlayerLevel2 : MonoBehaviour
 {
     public float jumpForce = 10;
 
@@ -33,7 +33,7 @@ public class Controller_Player : MonoBehaviour
 
     public virtual void FixedUpdate()
     {
-        if (GameManager.actualPlayer == playerNumber)
+        if (GameManagerLevel2.actualPlayer == playerNumber)
         {
             Movement();
         }
@@ -41,7 +41,7 @@ public class Controller_Player : MonoBehaviour
 
     private void Update()
     {
-        if (GameManager.actualPlayer == playerNumber)
+        if (GameManagerLevel2.actualPlayer == playerNumber)
         {
             Jump();
             if (SomethingLeft())
@@ -148,7 +148,7 @@ public class Controller_Player : MonoBehaviour
         if (collision.gameObject.CompareTag("Water"))
         {
             Destroy(this.gameObject);
-            GameManager.gameOver = true;
+            GameManagerLevel2.gameOver = true;
         }
         if (collision.gameObject.CompareTag("Floor"))
         {
