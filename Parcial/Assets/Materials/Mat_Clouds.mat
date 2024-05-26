@@ -41,12 +41,12 @@ Material:
     - _AlphaClip: 116.1
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
-    - _Clouds_Alpha: 0.72
-    - _Density: 0.44
+    - _Clouds_Alpha: 0.54
+    - _Density: 0.71
     - _Distort_Clouds: 0.05
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Scale_Clouds: 43.7
+    - _Scale_Clouds: 40.32
     - _VertexOffset: -0.2
     m_Colors:
     - _Color: {r: 191.74902, g: 149.23863, b: 149.23863, a: 1}
