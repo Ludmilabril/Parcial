@@ -6,13 +6,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static bool gameOver = false;
-
     public static bool winCondition = false;
-
     public static int actualPlayer = 0;
 
     public List<Controller_Target> targets;
-
     public List<Controller_Player> players;
 
     void Start()
@@ -20,25 +17,24 @@ public class GameManager : MonoBehaviour
         Physics.gravity = new Vector3(0, -30, 0);
         gameOver = false;
         winCondition = false;
-        SetConstraits();
+        SetConstraints();
     }
 
     void Update()
     {
         GetInput();
         CheckWin();
-
     }
 
     private void CheckWin()
     {
         int i = 0;
-        foreach(Controller_Target t in targets)
+        foreach (Controller_Target t in targets)
         {
             if (t.playerOnTarget)
             {
                 i++;
-                //Debug.Log(i.ToString());
+                // Debug.Log(i.ToString());
             }
         }
         if (i >= 7)
@@ -53,33 +49,33 @@ public class GameManager : MonoBehaviour
         {
             if (actualPlayer <= 0)
             {
-                actualPlayer = 6;
-                SetConstraits();
+                actualPlayer = players.Count - 1;
+                SetConstraints();
             }
             else
             {
                 actualPlayer--;
-                SetConstraits();
+                SetConstraints();
             }
         }
         if (Input.GetKeyDown(KeyCode.E))
         {
-            if (actualPlayer >= 6)
+            if (actualPlayer >= players.Count - 1)
             {
                 actualPlayer = 0;
-                SetConstraits();
+                SetConstraints();
             }
             else
             {
                 actualPlayer++;
-                SetConstraits();
+                SetConstraints();
             }
         }
     }
 
-    private void SetConstraits()
+    private void SetConstraints()
     {
-        foreach(Controller_Player p in players)
+        foreach (Controller_Player p in players)
         {
             if (p == players[actualPlayer])
             {

@@ -28,7 +28,7 @@ public class Controller_Player : MonoBehaviour
     {
         rb = GetComponent<Rigidbody>();
         col = GetComponent<BoxCollider>();
-        rb.constraints = RigidbodyConstraints.FreezePositionX| RigidbodyConstraints.FreezePositionZ|RigidbodyConstraints.FreezeRotation;
+        //rb.constraints = RigidbodyConstraints.FreezePositionX| RigidbodyConstraints.FreezePositionZ|RigidbodyConstraints.FreezeRotation;
     }
 
     public virtual void FixedUpdate()
