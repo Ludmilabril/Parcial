@@ -32,9 +32,9 @@ Material:
     - _BlendHorizon: 1.8
     - _Blend_1: 8.8
     m_Colors:
-    - _GroundColor: {r: 0.26293036, g: 0.24385902, b: 0.3773585, a: 0}
-    - _HorizonColor: {r: 0.03457636, g: 0.08743681, b: 0.1981132, a: 0}
-    - _SkyColor: {r: 0.43580198, g: 0.4289338, b: 0.4811321, a: 0}
+    - _GroundColor: {r: 0.14705896, g: 0, b: 1, a: 0}
+    - _HorizonColor: {r: 0, g: 0.14919059, b: 0.482, a: 0}
+    - _SkyColor: {r: 0.43796727, g: 0.4339178, b: 0.46226418, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &1591980863916628089
 MonoBehaviour:
