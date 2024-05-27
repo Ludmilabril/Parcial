@@ -20,8 +20,8 @@ public class Controller_PlayerLevel2 : MonoBehaviour
     internal RaycastHit leftHit,rightHit,downHit;
 
     public float distanceRay,downDistanceRay;
-
-    private bool canMoveLeft, canMoveRight,canJump;
+    [SerializeField]
+    public bool canMoveLeft, canMoveRight,canJump;
     internal bool onFloor;
 
     private void Start()
@@ -37,6 +37,7 @@ public class Controller_PlayerLevel2 : MonoBehaviour
         {
             Movement();
         }
+
     }
 
     private void Update()
@@ -112,7 +113,7 @@ public class Controller_PlayerLevel2 : MonoBehaviour
         return Physics.Raycast(landingRay, out leftHit, transform.localScale.x/1.8f);
     }
 
-    private void Movement()
+    public void Movement()
     {
         if (Input.GetKey(KeyCode.A) && canMoveLeft)
         {

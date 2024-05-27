@@ -14,6 +14,7 @@ public class GameManagerLevel2 : MonoBehaviour
     public List<Controller_TargetLevel2> targets;
     public List<Controller_PlayerLevel2> players;
 
+
     void Start()
     {
         Physics.gravity = new Vector3(0, -30, 0);
